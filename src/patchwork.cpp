@@ -55,7 +55,7 @@ void callbackCloud(const sensor_msgs::PointCloud2::Ptr &cloud_msg)
 int main(int argc, char**argv) {
 
     ros::init(argc, argv, "PatchworkNode");
-    ros::NodeHandle nh("~");
+    ros::NodeHandle nh;
     
     // determines if original cloud is republished
     nh.param<bool>("enable_cloud_republish", enable_cloud_republish, false);
